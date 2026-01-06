@@ -1,0 +1,85 @@
+body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+
+    .pokemon-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .pokemon-card div {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .pokemon-card div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .pokemon-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .pokemon-card h3 {
+      text-transform: capitalize;
+      color: #333;
+      margin: 10px 0 5px;
+    }
+
+    .pokemon-card p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+  .pokemon-list{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .list-view{
+     background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .list-view img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+      .pokemon-list div:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btns button{
+      background-color: rgb(91, 160, 221);
+    color:white;
+    padding:10px;
+    margin:8px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
