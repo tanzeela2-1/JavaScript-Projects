@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Roll Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="dice-container">
+    <h1>🎲 Dice Roll Game</h1>
+
+    <img id="diceImg"
+         src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Dice-1-b.svg"
+         alt="Dice">
+
+    <p id="diceNumber"></p>
+    <p id="result"></p>
+
+    <div class="buttons">
+      <button onclick="rollDice()">Roll Dice</button>
+      <button class="reset" onclick="restartGame()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
