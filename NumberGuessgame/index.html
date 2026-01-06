@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number</h1>
+      
+         <p id="message"></p>
+     
+<button  class=active onclick= "setDifficulty('easy') "id="easy">Easy</button>
+<button onclick= "setDifficulty('hard')" id="hard">Hard</button>
+<button onclick="resetFun()" id="reset">Reset</button>
+     
+        </div>  
+   <div class="gameArea">
+           <input type="number" id="guess"> 
+        <button id="checkBtn">Check</button>
+        <p id="attempts">Attempts: 0</p>
+
+    </div>
+     <script src="script.js"></script>
+    
+</body>
+</html>
