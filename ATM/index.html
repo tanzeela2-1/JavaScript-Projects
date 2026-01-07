@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+</head>
+<body>
+    <h1>Basic ATM System Using JavaScript </h1>
+    <script>
+
+        let balance = 5000; //balance
+const correctPin = 1234; //Pin
+//validationPin
+const validatePin = (inputPin) => inputPin === correctPin; //arrow function: compare pin is validate or not
+//check balance
+const checkBalance = (balance) => alert(`Your current balance is ₹${balance}`);
+// deposit
+const deposit = (balance, amount) => {
+  if (amount <= 0 || isNaN(amount)) {
+    alert('Invalid deposit amount .');
+    return balance;
+  }
+  balance += amount;
+  alert(`deposit successfull! your new balance is  ₹ ${balance}`);
+  return balance;
+};
+const withDraw = (balance, amount) => {
+  if (amount <= 0 || isNaN(amount)) {
+    alert('Invalid withdrawal amount .');
+    return balance;
+  } else if (amount > balance) {
+    alert('Infufficient funds');
+    return balance;
+  }
+  balance -= amount;
+  alert(`withdraw successful! your new balance is ${balance}`);
+  return balance;
+};
+const atmInterface = () => {
+  let pin = Number(prompt('Enter PIN:'));
+  if (!validatePin(pin)) {
+    alert('Incorrect PIN. Access denied.');
+    return;
+  }
+  alert('Welcome to the ATM!');
+  console.log('press 1 CheckBalance');
+  console.log('press 2 Deposit Money');
+  console.log('press 3 Withdraw');
+  console.log('press 4 Exit');
+
+  let option = Number(prompt('Enter the option:'));
+  //  console.log(option);
+  if (option === 1) {
+    checkBalance(balance);
+  } else if (option === 2) {
+    let amount = Number(prompt('Enter the amount deposit'));
+    deposit(amount, balance);
+  } else if (option === 3) {
+    let amount = Number(prompt('Enter the amount withdraw'));
+    withDraw(balance, amount);
+  } else if (option === 4) {
+    console.log('Thankyou for using the ATM');
+  } else {
+    alert('Invalid option selected.');
+  }
+};
+
+atmInterface();
+
+    </script>
+    
+</body>
+</html>
