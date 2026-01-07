@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic task</title>
+</head>
+<body>
+
+    <h1>Get Final Price task </h1>
+    <script>console.log('Get Final Price task');
+function getFinalPrice(cartAmount, hasCoupon, isFirstPurchase) {
+  if (cartAmount < 0 || typeof cartAmount !== 'number') {
+    return 'invalid card amount';
+  }
+  let finalAmount = cartAmount;
+  // Base discount
+  if (cartAmount >= 0 && cartAmount < 500) {
+    console.log('no discount');
+  }
+  if (cartAmount >= 500 && cartAmount <= 999) {
+    finalAmount -= finalAmount * 0.1; //10% off
+    console.log('you got 10% off', cartAmount);
+  } else if (cartAmount >= 1000 && cartAmount <= 1999) {
+    finalAmount -= finalAmount * 0.15; //15% off
+    console.log('you got 15% off', cartAmount);
+  } else if (cartAmount >= 2000) {
+    finalAmount -= finalAmount * 0.25; //25% off
+    console.log('you got 25% off', cartAmount);
+  }
+
+  //coupon discount
+  if (hasCoupon) {
+    finalAmount -= 100;
+  }
+  if (isFirstPurchase) {
+    finalAmount -= finalAmount * 0.05; //bonus
+  } //extra 5%
+  finalAmount += finalAmount * 0.18; //tax(18% GST)
+  return Number(finalAmount.toFixed(2)); //round to 2 decimal place
+}
+console.log(getFinalPrice(600, false, false));
+console.log(getFinalPrice(1100, true, true));
+console.log(getFinalPrice(2400, true, false));
+console.log(getFinalPrice(300, true, true));
+console.log(getFinalPrice(-100, false, false));
+
+</script>
+    
+</body>
+</html>
