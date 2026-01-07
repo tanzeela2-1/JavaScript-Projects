@@ -1,0 +1,44 @@
+ *{
+  padding: 0;
+  margin: 0;
+ }
+ .gallery {
+  max-width: 600px;
+  margin: auto;
+}
+h1{
+text-align: center;
+margin-top: 1rem;
+color: rgb(188, 137, 42);
+}
+span{
+  font-size: 40px;
+  color: rgb(154, 77, 22);
+}
+#preview {
+  margin-top: 2rem;
+  width: 100%;
+  height: auto;
+  /* border: 2px solid #ccc; */
+  border-radius: 3rem;
+  margin-bottom: 15px;
+}
+#thumbnails{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.thumb {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+  border-radius: 5px;
+} 
+
+.thumb.active {
+  border: 2px solid red;
+}
+
