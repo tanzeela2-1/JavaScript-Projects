@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Login Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <div id="login-page" class="card">
+    <input type="text" id="username" placeholder="Enter Username" />
+    <input type="password" id="password" placeholder="Enter password" />
+    <button type="button" onclick="login()">Login</button>
+    <p id="error-message" class="error"></p>
+  </div>
+
+
+  <div id="welcome-page" class="card" style="display: none;">
+    <h2 id="welcome-text"></h2>
+    <button type="button" onclick="logout()">Logout</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
